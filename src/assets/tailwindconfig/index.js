@@ -1,8 +1,9 @@
 const colorConfig = {
   primary: "#FFEAD0",
-  orenge: "#E17654l",
+  secondary: "#FF8C38",
   hitam: "#161616",
   ijo: "#115E59",
+  menuFont: "#4D4D4D",
 };
 
 const fontConfig = {
