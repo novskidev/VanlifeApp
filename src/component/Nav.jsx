@@ -3,7 +3,7 @@ import { signIcon } from "../constant/iconConst";
 
 function Navbar() {
   return (
-    <nav className="bg-primary w-full h-[112px] p-6 flex items-center justify-between m-auto ">
+    <nav className="bg-primary w-[548px] h-[112px] p-6 flex items-center justify-between m-auto ">
       <h1 className=" hover:text-3xl font-inter text-2xl font-black cursor-pointer">
         #VANLIFE
       </h1>

@@ -4,9 +4,9 @@ import Button from "../component/Button";
 
 function Hero() {
   return (
-    <main className="relative">
+    <main className="relative w-[550px] h-auto">
       <img
-        className="h-[386px] lg:h-auto w-full"
+        className="h-auto lg:h-auto w-full"
         src={heroPic}
         alt="hero-background"
       />
