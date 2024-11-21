@@ -4,9 +4,9 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <>
+    <div>
       <Home />
-    </>
+    </div>
   );
 }
 
