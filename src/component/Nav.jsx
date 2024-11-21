@@ -26,7 +26,7 @@ function Navbar() {
         <li className="hover:underline text-base m-2 font-semibold">About</li>
         <li className="hover:underline text-base m-2 font-semibold">Vans</li>
         <li>
-          <img className="w-4 h-4 m-2" src={signIcon} alt="Sign In" />
+          <img className="w-4 h-4 m-3" src={signIcon} alt="Sign In" />
         </li>
       </ul>
     </nav>
