@@ -1,12 +1,12 @@
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import "./backend/server";
+import Vans from "./pages/Vans";
 
 function App() {
   return (
     <div>
-      <About />
+      <Vans />
     </div>
   );
 }
