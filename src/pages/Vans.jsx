@@ -31,7 +31,7 @@ function Vans() {
   return (
     <div>
       <Navbar />
-      <main className="bg-primary flex flex-col items-center px-4 md:px-8">
+      <main className="bg-primary flex flex-col items-center px-4 md:px-8 h-auto">
         <h1 className="font-inter font-bold text-2xl md:text-4xl text-left">
           Explore our van option
         </h1>
