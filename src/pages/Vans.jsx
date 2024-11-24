@@ -19,6 +19,8 @@ function Vans() {
       });
   }, []);
 
+  console.log(vans);
+
   if (loading) {
     return <h1>Loading...</h1>;
   }
@@ -30,7 +32,7 @@ function Vans() {
         <h1 className="font-inter font-bold text-4xl text-left">
           Explore our van option
         </h1>
-        <div className="flex flex-wrap gap-5 mt-[22px] mb-[55px] items-center">
+        <div className="flex flex-wrap gap-5 mt-[22px]  items-center">
           <button
             className="hover:bg-[#E17654] hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md 
           "
@@ -47,6 +49,45 @@ function Vans() {
             Clear filters
           </a>
         </div>
+        <article>
+          <ul className="flex flex-wrap justify-center w-[500px] gap-6 my-14">
+            {vans.map((item) => (
+              <li className="flex flex-col gap-2" key={item.id}>
+                <img
+                  className="w-[230px] h-[230px]"
+                  src={item.imageUrl}
+                  alt={item.name}
+                />
+                <div className="flex justify-between">
+                  <p className="font-inter text-[20px] font-semibold text-hitam">
+                    {item.name}
+                  </p>
+                  <div className="flex flex-col gap-0">
+                    <span className="font-inter text-[20px] font-semibold text-hitam">
+                      ${item.price}
+                    </span>
+                    <span className="text-sm font-normal"> /day</span>
+                  </div>
+                </div>
+                {item.type === "rugged" && (
+                  <p className="bg-ijo text-[#FFEAD0] w-[85px] text-center rounded py-1 font-semibold text-[16px] font-inter">
+                    Rugged
+                  </p>
+                )}
+                {item.type === "simple" && (
+                  <p className="bg-[#E17654] text-[#FFEAD0] w-[85px] text-center rounded py-1 font-semibold text-[16px] font-inter">
+                    Simple
+                  </p>
+                )}
+                {item.type === "luxury" && (
+                  <p className="bg-hitam text-[#FFEAD0] w-[85px] text-center rounded py-1 font-semibold text-[16px] font-inter">
+                    Luxury
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </article>
       </main>
       <Footer />
     </div>
