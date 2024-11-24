@@ -5,6 +5,7 @@ import Footer from "../section/Footer";
 function Vans() {
   const [vans, setVans] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     fetch("/api/vans")
@@ -19,7 +20,9 @@ function Vans() {
       });
   }, []);
 
-  console.log(vans);
+  const filteredVans = filter
+    ? vans.filter((van) => van.type === filter)
+    : vans;
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -32,26 +35,35 @@ function Vans() {
         <h1 className="font-inter font-bold text-4xl text-left">
           Explore our van option
         </h1>
-        <div className="flex flex-wrap gap-5 mt-[22px]  items-center">
+        <div className="flex flex-wrap gap-5 mt-[22px] items-center">
           <button
-            className="hover:bg-[#E17654] hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md 
-          "
+            className="hover:bg-[#E17654] hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md"
+            onClick={() => setFilter("simple")}
           >
             Simple
           </button>
-          <button className="hover:bg-hitam hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md">
+          <button
+            className="hover:bg-hitam hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md"
+            onClick={() => setFilter("luxury")}
+          >
             Luxury
           </button>
-          <button className="hover:bg-ijo hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md">
+          <button
+            className="hover:bg-ijo hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md"
+            onClick={() => setFilter("rugged")}
+          >
             Rugged
           </button>
-          <a className="text-center underline font-inter font-medium text-[16px]">
+          <a
+            className="text-center underline font-inter font-medium text-[16px] cursor-pointer"
+            onClick={() => setFilter("")}
+          >
             Clear filters
           </a>
         </div>
         <article>
           <ul className="flex flex-wrap justify-center w-[500px] gap-6 my-14">
-            {vans.map((item) => (
+            {filteredVans.map((item) => (
               <li className="flex flex-col gap-2" key={item.id}>
                 <img
                   className="w-[230px] h-[230px]"
