@@ -5,6 +5,7 @@ const colorConfig = {
   ijo: "#115E59",
   menuFont: "#4D4D4D",
   accent: "#FFCC8D",
+  simple: "#E17654",
 };
 
 const fontConfig = {

@@ -26,16 +26,28 @@ function Vans() {
   return (
     <div>
       <Navbar />
-      <h1>Vans List</h1>
-      <ul>
-        {vans.map((van) => (
-          <li key={van.id}>
-            <h2>{van.name}</h2>
-            <p>{van.description}</p>
-            <img src={van.imageUrl} alt={van.name} />
-          </li>
-        ))}
-      </ul>
+      <main className="bg-primary flex flex-col items-center">
+        <h1 className="font-inter font-bold text-4xl text-left">
+          Explore our van option
+        </h1>
+        <div className="flex flex-wrap gap-5 mt-[22px] mb-[55px] items-center">
+          <button
+            className="hover:bg-[#E17654] hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md 
+          "
+          >
+            Simple
+          </button>
+          <button className="hover:bg-hitam hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md">
+            Luxury
+          </button>
+          <button className="hover:bg-ijo hover:text-[#FFEAD0] font-inter text-[16px] text-center font-medium bg-[#FFEAD0] px-[26px] py-2 rounded-md">
+            Rugged
+          </button>
+          <a className="text-center underline font-inter font-medium text-[16px]">
+            Clear filters
+          </a>
+        </div>
+      </main>
       <Footer />
     </div>
   );
