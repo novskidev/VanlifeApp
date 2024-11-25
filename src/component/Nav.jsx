@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { signIcon } from "../constant/iconConst";
+import ReactDOM from "react-dom/client";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,12 +24,22 @@ function Navbar() {
           menuOpen ? "block" : "hidden"
         } w-full lg:w-auto lg:flex flex-col lg:flex-row  lg:gap-6 text-menuFont items-center cursor-pointer lg:static absolute bg-primary left-0 top-16 lg:top-auto z-10`}
       >
-        <li className="hover:underline text-base m-2 font-semibold">Host</li>
-        <li className="hover:underline text-base m-2 font-semibold">About</li>
-        <li className="hover:underline text-base m-2 font-semibold">Vans</li>
-        <li>
-          <img className="w-4 h-4 m-3" src={signIcon} alt="Sign In" />
-        </li>
+        <Link to="/">
+          <li className="hover:underline text-base m-2 font-semibold">Host</li>
+        </Link>
+        <Link to="/about">
+          <li className="hover:underline text-base m-2 font-semibold">About</li>
+        </Link>
+
+        <Link to="/vans">
+          <li className="hover:underline text-base m-2 font-semibold">Vans</li>
+        </Link>
+
+        <Link to="/login">
+          <li>
+            <img className="w-4 h-4 m-3" src={signIcon} alt="Sign In" />
+          </li>
+        </Link>
       </ul>
     </nav>
   );
