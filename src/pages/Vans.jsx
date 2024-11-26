@@ -25,7 +25,11 @@ function Vans() {
     : vans;
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="flex items-center justify-center bg-primary w-screen h-screen">
+        <h1 className="text-5xl font-bold">Loading...</h1>
+      </div>
+    );
   }
 
   return (
