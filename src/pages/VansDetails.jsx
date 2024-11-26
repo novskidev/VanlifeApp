@@ -20,8 +20,7 @@ function VansDetails() {
 
   return (
     <div className="bg-primary">
-      <Nav />
-      <main className="font-medium flex flex-col gap-5 justify-center content-center h-screen w-4/5 mt-[50px] mb-[85px] mx-auto">
+      <main className="font-medium flex flex-col gap-5 justify-center content-center h-auto p-6 w-4/5  mx-auto">
         <Link to="/vans">
           <h3 className="underline cursor-pointer">⬅️ Back to all vans</h3>
         </Link>
@@ -57,7 +56,6 @@ function VansDetails() {
         <p className="text-justify font-medium">{vans.description}</p>
         <Button variant="primary">Rent this van</Button>
       </main>
-      <Footer />
     </div>
   );
 }

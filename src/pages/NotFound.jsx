@@ -6,7 +6,6 @@ import Button from "../component/Button";
 function NotFound() {
   return (
     <div>
-      <Navbar />
       <main className="h-screen bg-primary flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
         <h1 className="font-inter text-2xl sm:text-3xl md:text-4xl leading-8 sm:leading-9 md:leading-10 font-bold text-hitam text-center mb-6 sm:mb-8 md:mb-[30px]">
           Sorry, the page you were <br className="hidden sm:block" /> looking
@@ -16,7 +15,6 @@ function NotFound() {
           Return to home
         </Button>
       </main>
-      <Footer />
     </div>
   );
 }

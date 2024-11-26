@@ -6,7 +6,6 @@ import Button from "../component/Button";
 function Login() {
   return (
     <div className="flex-grow h-screen">
-      <Navbar />
       <main className="bg-primary flex flex-col items-center gap-2 px-4 sm:px-6 lg:px-8 h-full">
         <h1 className="font-inter font-bold text-2xl sm:text-3xl lg:text-4xl mb-[48px] mt-[51px] text-center">
           Sign in to your account
@@ -38,7 +37,6 @@ function Login() {
           </span>
         </h2>
       </main>
-      <Footer />
     </div>
   );
 }

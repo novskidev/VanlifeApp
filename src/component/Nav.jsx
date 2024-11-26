@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { signIcon } from "../constant/iconConst";
-import ReactDOM from "react-dom/client";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,31 +16,39 @@ function Navbar() {
       <button
         className="block lg:hidden text-menuFont text-xl focus:outline-none"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-expanded={menuOpen}
       >
         ☰
       </button>
 
       <ul
         className={`${
-          menuOpen ? "block" : "hidden"
-        } w-full lg:w-auto lg:flex flex-col lg:flex-row  lg:gap-6 text-menuFont items-center cursor-pointer lg:static absolute bg-primary left-0 top-16 lg:top-auto z-10`}
+          menuOpen ? "block absolute left-0 top-16 z-10" : "hidden"
+        } w-full lg:w-auto lg:flex flex-col lg:flex-row lg:gap-6 text-menuFont items-center cursor-pointer lg:static bg-primary`}
       >
-        <Link to="/host/dashboard">
+        <NavLink
+          to="/host"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
           <li className="hover:underline text-base m-2 font-semibold">Host</li>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
           <li className="hover:underline text-base m-2 font-semibold">About</li>
-        </Link>
-
-        <Link to="/vans">
+        </NavLink>
+        <NavLink
+          to="/vans"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
           <li className="hover:underline text-base m-2 font-semibold">Vans</li>
-        </Link>
-
-        <Link to="/login">
+        </NavLink>
+        <NavLink to="/login">
           <li>
             <img className="w-4 h-4 m-3" src={signIcon} alt="Sign In" />
           </li>
-        </Link>
+        </NavLink>
       </ul>
     </nav>
   );

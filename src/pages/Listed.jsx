@@ -1,7 +1,4 @@
 import React from "react";
-import Navbar from "../component/Nav";
-import NestedNav from "../component/NestedNav.";
-import Footer from "../section/Footer";
 import { useFetch } from "../constant/useFetch";
 
 const VanCard = ({ name, price, image }) => {
@@ -23,8 +20,6 @@ function ListedVans() {
   const { vans } = useFetch("/api/vans");
   return (
     <div>
-      <Navbar />
-      <NestedNav />
       <main>
         <section>
           <div className="flex justify-between items-center  w-auto m-5 mb-6">
@@ -46,7 +41,6 @@ function ListedVans() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

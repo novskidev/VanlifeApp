@@ -6,9 +6,7 @@ import Footer from "../section/Footer";
 function Home() {
   return (
     <div className="h-auto">
-      <Navbar />
       <Hero />
-      <Footer />
     </div>
   );
 }

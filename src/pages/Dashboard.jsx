@@ -1,7 +1,4 @@
 import React from "react";
-import Navbar from "../component/Nav";
-import Footer from "../section/Footer";
-import NestedNav from "../component/NestedNav.";
 import { useFetch } from "../constant/useFetch";
 
 // Komponen VanCard untuk menampilkan kartu van
@@ -24,9 +21,7 @@ const VanCard = ({ name, price, image }) => {
 const HostDashboard = () => {
   const { vans } = useFetch("/api/vans");
   return (
-    <div className="h-screen w-full ">
-      <Navbar />
-      <NestedNav />
+    <div className="h-auto w-full ">
       <section className="bg-[#FFEAD0] rounded-lg p-6 ">
         <div className="flex justify-between items-center">
           <div>
@@ -69,7 +64,6 @@ const HostDashboard = () => {
           ))}
         </div>
       </section>
-      <Footer />
     </div>
   );
 };

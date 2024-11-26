@@ -1,27 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NestedNav() {
   return (
     <nav className="bg-primary">
       <ul className="flex gap-5  p-5 ">
-        <Link to="/host/dashboard">
+        <NavLink
+          to="/host/dashboard"
+          className={({ isActive }) =>
+            isActive ? "underline font-semibold" : ""
+          }
+        >
           <li className="hover:underline text-base m-2 hover:font-semibold">
             Dashboard
           </li>
-        </Link>
+        </NavLink>
         <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
           Income
         </li>
-        <Link to="/host/vans">
+        <NavLink
+          to="/host/vans"
+          className={({ isActive }) =>
+            isActive ? "underline font-semibold" : ""
+          }
+        >
           <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
             Vans
           </li>
-        </Link>
-
-        <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
-          Review
-        </li>
+        </NavLink>
+        <NavLink>
+          <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
+            Review
+          </li>
+        </NavLink>
       </ul>
     </nav>
   );
