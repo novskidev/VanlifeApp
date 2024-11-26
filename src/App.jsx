@@ -7,6 +7,7 @@ import Vans from "./pages/Vans";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import VansDetails from "./pages/VansDetails";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/vans/:id" element={<VansDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/host/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

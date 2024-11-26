@@ -8,9 +8,11 @@ function Navbar() {
 
   return (
     <nav className="bg-primary w-full h-auto p-4 flex flex-wrap items-center justify-between">
-      <h1 className="hover:text-3xl font-inter text-2xl font-black cursor-pointer">
-        #VANLIFE
-      </h1>
+      <Link to="/">
+        <h1 className="hover:text-3xl font-inter text-2xl font-black cursor-pointer">
+          #VANLIFE
+        </h1>
+      </Link>
 
       <button
         className="block lg:hidden text-menuFont text-xl focus:outline-none"
@@ -24,7 +26,7 @@ function Navbar() {
           menuOpen ? "block" : "hidden"
         } w-full lg:w-auto lg:flex flex-col lg:flex-row  lg:gap-6 text-menuFont items-center cursor-pointer lg:static absolute bg-primary left-0 top-16 lg:top-auto z-10`}
       >
-        <Link to="/">
+        <Link to="/host/dashboard">
           <li className="hover:underline text-base m-2 font-semibold">Host</li>
         </Link>
         <Link to="/about">

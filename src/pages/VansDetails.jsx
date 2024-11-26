@@ -25,7 +25,11 @@ function VansDetails() {
         <Link to="/vans">
           <h3 className="underline cursor-pointer">⬅️ Back to all vans</h3>
         </Link>
-        <img className="w-[500px] h-[500px]" src={vans.imageUrl} alt="" />
+        <img
+          className="object-cover w-[500px] h-[500px]"
+          src={vans.imageUrl}
+          alt=""
+        />
         {vans.type === "rugged" && (
           <p className="bg-ijo text-[#FFEAD0] w-[70px] md:w-[85px] text-center rounded py-1 font-semibold text-[14px] md:text-[16px] font-inter">
             Rugged
@@ -50,7 +54,7 @@ function VansDetails() {
           </span>
           <span className="text-xs md:text-sm font-semibold"> /day</span>
         </div>
-        <p className="font-medium">{vans.description}</p>
+        <p className="text-justify font-medium">{vans.description}</p>
         <Button variant="primary">Rent this van</Button>
       </main>
       <Footer />

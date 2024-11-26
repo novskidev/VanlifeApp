@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../component/Nav";
 import Footer from "../section/Footer";
 import { useFetch } from "../constant/useFetch";
+import { Link } from "react-router-dom";
 
 function Vans() {
   const [filter, setFilter] = useState("");
@@ -59,11 +60,14 @@ function Vans() {
                 className="flex flex-col gap-2 w-[150px] md:w-[230px]"
                 key={item.id}
               >
-                <img
-                  className="w-[150px] h-[150px] md:w-[230px] md:h-[230px] object-cover"
-                  src={item.imageUrl}
-                  alt={item.name}
-                />
+                <Link to={`/vans/${item.id}`}>
+                  <img
+                    className="w-[150px] h-[150px] md:w-[230px] md:h-[230px] object-cover cursor-pointer"
+                    src={item.imageUrl}
+                    alt={item.name}
+                  />
+                </Link>
+
                 <div className="flex justify-between">
                   <p className="font-inter text-[14px] md:text-[20px] font-semibold text-hitam">
                     {item.name}
