@@ -1,24 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "../component/Nav";
 import Footer from "../section/Footer";
+import { useFetch } from "../constant/useFetch";
 
 function Vans() {
-  const [vans, setVans] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("");
-
-  useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => {
-        setVans(data.vans);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching vans:", err);
-        setLoading(false);
-      });
-  }, []);
+  const { vans, loading } = useFetch("/api/vans");
 
   const filteredVans = filter
     ? vans.filter((van) => van.type === filter)
@@ -35,7 +22,7 @@ function Vans() {
   return (
     <div>
       <Navbar />
-      <main className="bg-primary flex flex-col items-center px-4 md:px-8 h-auto">
+      <main className="bg-primary flex flex-col items-center px-4 md:px-8 h-full">
         <h1 className="font-inter font-bold text-2xl md:text-4xl text-left">
           Explore our van option
         </h1>
