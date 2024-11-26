@@ -27,17 +27,30 @@ const HostDashboard = () => {
     <div className="h-screen w-full ">
       <Navbar />
       <NestedNav />
-      <section className="bg-[#FFEAD0] rounded-lg p-6 mb-8">
+      <section className="bg-[#FFEAD0] rounded-lg p-6 ">
         <div className="flex justify-between items-center">
           <div>
             <h2 className="text-2xl font-semibold">Welcome!</h2>
             <p className="text-gray-600">Income last 30 days</p>
           </div>
-          <div className="text-3xl font-bold text-[#161616]">$2,260</div>
+          <div className="flex flex-col items-end gap-1">
+            <p className="text-3xl font-bold text-[#161616]">$2,260</p>
+            <a href="#" className="text-gray-600 hover:underline">
+              Details
+            </a>
+          </div>
         </div>
       </section>
+      <section className="bg-[#FFEAD0] rounded-lg p-6 flex justify-between">
+        <h1 className="text-2xl font-semibold">
+          Review Score ⭐ 5.0 <span className="font-normal text-xl">/5</span>
+        </h1>
+        <a href="#" className="text-gray-600 hover:underline">
+          Details
+        </a>
+      </section>
 
-      <section>
+      <section className="mt-5">
         <div className="flex justify-between items-center  w-auto mx-4 mb-6">
           <h2 className="text-2xl font-bold">Your Listed Vans</h2>
           <a href="/vans" className="text-gray-600 hover:underline">

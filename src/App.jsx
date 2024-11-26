@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import VansDetails from "./pages/VansDetails";
 import Dashboard from "./pages/Dashboard";
+import ListedVans from "./pages/Listed";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/host/dashboard" element={<Dashboard />} />
+          <Route path="/host/vans" element={<ListedVans />} />
         </Routes>
       </Router>
     </div>
