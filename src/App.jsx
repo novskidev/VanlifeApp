@@ -11,14 +11,16 @@ import Dashboard from "./pages/Dashboard";
 import ListedVans from "./pages/Listed";
 import Layout from "./component/Layout";
 import HostLayout from "./component/HostLayout";
+import Review from "./pages/Reviews";
+import Income from "./pages/Income";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen h-screen">
       <Router>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />} />
             <Route path="/vans/:id" element={<VansDetails />} />
@@ -26,8 +28,10 @@ function App() {
             <Route path="*" element={<NotFound />} />
 
             <Route path="host" element={<HostLayout />}>
-              <Route path="dashboard" element={<Dashboard />} />
+              <Route index element={<Dashboard />} />
               <Route path="vans" element={<ListedVans />} />
+              <Route path="income" element={<Income />} />
+              <Route path="review" element={<Review />} />
             </Route>
           </Route>
         </Routes>

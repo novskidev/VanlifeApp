@@ -6,7 +6,8 @@ function NestedNav() {
     <nav className="bg-primary">
       <ul className="flex gap-5  p-5 ">
         <NavLink
-          to="/host/dashboard"
+          to="/host"
+          end
           className={({ isActive }) =>
             isActive ? "underline font-semibold" : ""
           }
@@ -15,9 +16,16 @@ function NestedNav() {
             Dashboard
           </li>
         </NavLink>
-        <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
-          Income
-        </li>
+        <NavLink
+          to="/host/income"
+          className={({ isActive }) =>
+            isActive ? "underline font-semibold" : ""
+          }
+        >
+          <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
+            Income
+          </li>
+        </NavLink>
         <NavLink
           to="/host/vans"
           className={({ isActive }) =>
@@ -28,7 +36,12 @@ function NestedNav() {
             Vans
           </li>
         </NavLink>
-        <NavLink>
+        <NavLink
+          to="/host/review"
+          className={({ isActive }) =>
+            isActive ? "underline font-semibold" : ""
+          }
+        >
           <li className="hover:underline text-base m-2 hover:font-semibold cursor-pointer">
             Review
           </li>
