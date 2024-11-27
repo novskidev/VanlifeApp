@@ -9,7 +9,7 @@ const VanCard = ({ name, price, image }) => {
         <h3 className="text-xl font-bold mb-2">{name}</h3>
         <p className="text-gray-600">${price}/day</p>
         <button className="mt-3 w-full bg-[#FF8C38] text-white py-2 rounded-md hover:bg-orange-600 transition">
-          Edit
+          View
         </button>
       </div>
     </div>
