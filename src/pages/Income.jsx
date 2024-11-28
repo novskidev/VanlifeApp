@@ -9,7 +9,7 @@ function Income() {
         Last <span className="underline font-light">30 days</span>{" "}
       </h2>
       <h1 className="font-bold text-4xl py-4">$2,260</h1>
-      <img src={graphPic} alt="" />
+      <img className="w-[400px] h-[300px]" src={graphPic} alt="" />
     </main>
   );
 }

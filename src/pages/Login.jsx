@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../component/Nav";
-import Footer from "../section/Footer";
 import Button from "../component/Button";
 
 function Login() {

@@ -10,7 +10,7 @@ function Review() {
           last <span className="underline font-bold">30 days</span>
         </h2>
       </div>
-      <img className="p-5 " src={reviewPic} alt="" />
+      <img className="p-5 w-[500px] " src={reviewPic} alt="" />
       <p className="font-bold text-[16px] px-6 py-5">Reviews</p>
       <p className="px-6">⭐⭐⭐⭐⭐</p>
       <p className="font-bold px-6 py-5">
